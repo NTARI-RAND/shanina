@@ -1,0 +1,120 @@
+# Shanina — Concept & Feature Spec
+
+*Name: **Shanina** (settled July 22, 2026; drafted under the working title "JFA Astrology," retired to avoid collision with Janus-Facing Architecture). Draft v0.3 — July 20, 2026. Supersedes v0.2: tiers now attach to measurement types rather than devices, and the phone sensor network is elevated to a first-class geophysical instrument for Earth's dynamic envelope.*
+
+---
+
+## The concept
+
+Shanina is two engines sharing one sky. The consumer engine is a location-based astrology app on the tropical zodiac, grounded in what is actually visible overhead tonight. The data engine is an open observational commons: a community-built astronomical database layered on top of JPL's ephemerides, fed by phone sensors at massive scale and by home telescopes and school observatories at high quality.
+
+The two engines need each other. Astrology supplies the daily reason millions of people point a camera at the sky; the commons turns those pointed devices into data. Existing astrology apps treat the sky as abstract computation wrapped in proprietary text; existing citizen-astronomy projects struggle for sustained participation. Shanina's bet is that each solves the other's problem. Tagline candidate stands: **the astrology app that makes you look up.**
+
+The community's structural advantage over centralized astronomy is distribution, not aperture. One large observatory sees one sky from one place; ten thousand small instruments see every sky, everywhere, all the time. Distributed amateur networks already prove the model — occultation timing networks refine asteroid orbits, meteor camera networks triangulate fireballs, and variable-star observers have fed professional research for a century. Shanina gives that model a growth engine.
+
+## The core loop
+
+**Look up → Log → Learn → Link.** Tonight's Sky surfaces observable events with personal chart relevance (*Look up*). The member captures the event through the in-app camera or logs it manually (*Log*). The reading engine assembles meaning from the community's interpretation library (*Learn*). The observation enters the data commons at the appropriate evidence tier, and the witnessed event is stamped permanently into the member's chart timeline (*Link*). Every pass enriches both the personal chart history and the shared sky record.
+
+## The data commons: a tiered evidence model
+
+JPL is the gold standard and remains the core of the map for now. Community data extends and annotates that core; it never silently overwrites it. Crucially, tiers bind to **instrument–measurement pairs, not to devices**: the same phone can be weak at one measurement and first-class at another.
+
+**Tier 0 — Reference core.** JPL Development Ephemerides and the SkyEvents computed from them (positions, conjunctions, phases, eclipse and occultation predictions), together with the GNSS/geodetic reference frame. Authoritative by definition. Everything else in the system is measured against this layer.
+
+**Tier 1 — Instrumented observations.** Telescopes, tracked mounts, DSLRs on tripods, all-sky cameras, and school observatory rigs, contributed primarily through the web. These can produce durable data: plate-solved astrometry of minor bodies and comets, occultation timings, brightness estimates, and meteor triangulation from fixed stations. Tier 1 observations can be promoted into the durable map after validation. This is where home astronomers and schools compete by sheer distribution — coverage in space (occultation shadow chords need observers spread across the ground track) and coverage in time (transients don't wait for observatory scheduling).
+
+**Tier 2 — Phone image captures.** The image pathway from mobile. Phone optics and auto-exposure make catalog-grade astrometry and photometry unrealistic, so a phone image on its own almost never enters the core map. Its roles: corroborating that an event occurred and was visible, ground-truthing sky conditions against forecasts, and witnessing for the astrology loop — with sensor pose (GPS, compass azimuth, gyro altitude, synced timestamp) making each capture a calibrated pointing report that crowds can triangulate during fireballs and bright aurorae. Image records carry a decay policy: they feed verification, visibility heatmaps, and personal timelines, then archive unless corroboration promotes them. The bundle of sensors wrapped around that camera, however, matters far more than the camera itself.
+
+### Phones as a planetary sensor network
+
+The camera is the weakest sensor on the device. The instrument is the bundle: magnetometer, gyroscope, GNSS receiver (dual-frequency in many phones since 2018), and a disciplined clock. Individually noisy, at network scale these become a first-class geophysical instrument — and the precedents are already published. NOAA's CrowdMag aggregates phone magnetometer readings from around the world to supplement geomagnetic field models. Google researchers showed in Nature (2024) that GNSS measurements pooled from millions of Android phones can map the ionosphere with coverage rivaling dedicated monitor networks, especially over regions where monitors are sparse. NASA-funded Aurorasaurus demonstrated that crowd aurora reports refine auroral-oval predictions beyond what space-weather models alone deliver.
+
+Each of these is a measurement of Earth's dynamic envelope — magnetic field, ionosphere, upper atmosphere, night-light environment — responding to the Sun and to incoming solar-system material. That is the precise sense in which the network measures *the Earth itself within the context of the solar system*, and Shanina should claim it deliberately: phone image submissions for catalog astrometry remain Tier 2 supporting evidence with decay, while consented, aggregated phone **sensor streams are Tier 1 as a network**.
+
+The honest boundary: Earth's geometry, orientation, and orbit stay out of reach. GNSS constellations and VLBI pin those down to precisions many orders of magnitude beyond a phone compass, and they are exactly the reference frame the network is calibrated against — the arrow runs from the known sky into the phone, not the reverse. The lineage is old and flattering regardless: the 1761 and 1769 Venus-transit expeditions were distributed observers using the Earth itself as a baseline to measure the solar system. Shanina inherits the method with better clocks and a billion instruments.
+
+### Trust, calibration, and promotion
+
+Every contributing device is registered as an **Instrument** with a class (phone, camera, telescope rig, fixed station) and a calibration score. Instruments earn trust by agreeing with Tier 0 on known targets: a new telescope proves itself against predicted planet and star-field positions before its novel measurements carry weight, and a phone's compass and pose are continuously calibrated against the known positions of the objects it photographs. Observation weight is then a function of instrument class, measurement type, calibration score, plate-solve residuals, and independent corroboration. Promotion from ephemeral to supporting to durable follows explicit thresholds rather than moderator whim, and every promoted datum keeps its full provenance chain. The governing principle across every tier: **the known sky calibrates the sensor, and the calibrated sensor measures the unknown.** The calibration ladder doubles as pedagogy — a school class watching its rig graduate from "unproven" to "trusted against JPL" is a curriculum in itself.
+
+### Capture pipelines
+
+**Mobile (the reason for mobile-first).** An in-app camera flow tied to Tonight's Sky: pick the event, point, capture. The app stamps sensor pose (GPS, compass, gyro) and an NTP-disciplined timestamp, handles EXIF, and files the observation at the appropriate tier with immediate feedback — what you caught, how it corroborates others, what it means in your chart. Optional on-device brightness/star detection can flag captures worth a second look. Separately and strictly opt-in: background sensor-stream contribution (magnetometer, GNSS observables) for the planetary-network layer.
+
+**Web (cameras and telescopes).** Upload of FITS, RAW, and JPEG with an instrument profile attached. Server-side plate solving via the open-source astrometry.net engine yields real astrometric solutions; metadata forms capture exposure, optics, and timing method. Batch upload serves schools; a station API for fixed all-sky cameras arrives in a later phase. Occultation work gets a dedicated timing-capture mode, since sub-second accuracy is the whole game there — NTP gets phones to tens of milliseconds, which is genuinely usable for bright events, and GPS-disciplined timing is supported for serious rigs.
+
+All pipelines produce the same Observation or SensorStream entities, differing only in provenance and tier.
+
+## Feature spec
+
+### 1. Chart engine
+
+Natal charts and live transits, location-based, tropical zodiac by default with a sidereal toggle and selectable house systems (Placidus shipped default). With the codebase now AGPL-3.0, the Swiss Ephemeris licensing obstacle dissolves — its AGPL terms are compatible — so the engine can use Skyfield/JPL for the observational pipeline and either stack for astrology calculations; standardizing on Skyfield everywhere keeps one dependency chain and is the lean recommendation.
+
+### 2. Tonight's Sky
+
+The daily entry point: visible planets with rise/set, close conjunctions with angular separation, Moon phase, eclipses, meteor showers, bright occultations — filtered by real observability (altitude, magnitude, cloud forecast) and paired with one line of chart relevance. Every item carries a capture button that drops straight into the mobile pipeline. Aurora visibility alerts join the feed once the space-weather layer ships.
+
+### 3. The Sky Log
+
+The community observation record, tier-aware. Entries show their evidence tier and confidence; clusters of independent captures graduate an event to **Verified Community Event** status. Feed views: near you, global, following. Verified events open threads.
+
+### 4. Witnessed transits
+
+When a logged capture corresponds to a transit touching the member's chart, that transit is marked **witnessed** in their timeline, with the capture attached. Over years this becomes a diary of skies personally stood under — the retention core of the consumer engine.
+
+### 5. The Interpretation Commons
+
+Community-authored, versioned, attributed interpretation entries per symbolic building block, ranked by vote and curated by volunteer editors, licensed CC BY-SA 4.0 alongside the documentation. The reading engine assembles daily readings from chart math plus top-ranked entries. The style guide holds: reflective and possibility-framed, never directive on health, money, or legal matters.
+
+### 6. Community events, circles, and campaigns
+
+Threads on verified events; regional circles around shared skies; watch parties for headline events. Phase 3 adds coordinated observation campaigns — occultation chords, meteor-network nights, and geomagnetic-storm sensor pushes — where the app assigns distributed observers to positions or windows, which is distribution-as-strategy made into a game.
+
+### 7. Notifications
+
+Quiet by design: one push per night at most, only when an event is simultaneously observable from the member's location, relevant to their chart, and plausible given weather.
+
+## Licensing & data sources
+
+**Code:** AGPL-3.0 across services and apps. **Documentation and the Interpretation Commons:** CC BY-SA 4.0. **The observation database itself:** needs its own instrument — code and content licenses don't cleanly cover compiled data. The recommendation, pending your call, is ODbL 1.0 (the OpenStreetMap model), which carries the same share-alike ethos into the data layer, with contributed media under CC BY-SA. The alternative is CC0/CC BY for maximum scientific reuse, which researchers often prefer — a question that now matters more, since sensor-stream data has genuine space-weather research value.
+
+| Need | Source | License / note |
+|---|---|---|
+| Planetary positions | JPL DE ephemerides via Skyfield | Data public domain; library MIT |
+| Astrology calculations (optional) | Swiss Ephemeris | AGPL — now compatible with the codebase |
+| Plate solving | astrometry.net engine | Open source, self-hostable |
+| Cloud cover forecast | Open-Meteo | Open, attribution required |
+| Geomagnetic & space-weather reference | NOAA/SWPC models and indices | Open; CrowdMag as prior art for phone magnetometry |
+| Meteor shower calendar | International Meteor Organization data | Verify terms before launch |
+| Light pollution overlay | VIIRS-derived open datasets | Phase 3 |
+| Time zones & geocoding | IANA tzdata, GeoNames | Open |
+
+The give-back holds and strengthens: periodic open releases of the anonymized observation dataset, the sensor-stream aggregates, and the full Commons, so the "public and community built" claim is true in both directions.
+
+## Data model sketch
+
+A **User** owns **Charts** and registers **Instruments** (class, calibration score, timing method). The system computes **SkyEvents** from Tier 0. An **Observation** references an Instrument and optionally a SkyEvent, carrying provenance (sensor pose or plate-solve solution, exposure metadata, timestamp discipline), a tier assigned per measurement type, a confidence value, and a decay state (ephemeral → supporting → durable). A **SensorStream** is a consented, anonymized time series (magnetometer readings, GNSS observables) from an Instrument, aggregated regionally before it enters any product surface. **Verifications** cluster independent observations into Verified Community Events. **CommonsEntries** are versioned interpretation texts; a **Reading** binds a Chart, SkyEvents, and the entries used, stored for reproducibility. **Threads** hang off verified events and commons entries.
+
+## Privacy & safety
+
+There is a real tension between pipeline precision and public exposure: fireball triangulation wants accurate positions, members deserve location privacy. Resolution: precise sensor pose is stored privately and used only inside the computation pipeline; public display is always fuzzed to roughly city-level; contributors can opt into precise public location, which schools and fixed stations typically will. Photo EXIF is stripped from public copies, and logging with location fully hidden remains possible (excluded from triangulation). Passive sensor streams are a bigger ask than photos: magnetometer and GNSS contribution is strictly opt-in with plain-language consent, anonymized on-device, aggregated regionally before any use, and run inside a published battery budget. The Commons moderation policy continues to police fatalistic or medical claims. Adult positioning stands.
+
+## Positioning & honesty
+
+Astrology is presented as reflective practice; the data commons is presented as real citizen astronomy and space-weather sensing — claims that are verifiable, which makes them the marketing spine. The community rallying ideas, now two: **distribution beats aperture**, and **the known sky calibrates the sensor; the sensor measures the unknown.**
+
+## Build phases
+
+**Phase 1 — MVP.** Chart engine, Tonight's Sky, the mobile capture pipeline with sensor-pose stamping (promoted into MVP — it is the point of mobile-first), personal witnessed timeline, minimal global feed.
+
+**Phase 2 — Commons.** Verification clustering and tier logic, web upload with plate solving and instrument registration, Interpretation Commons v1, quiet notifications, threads.
+
+**Phase 3 — Network.** School and station program, batch and API ingestion, occultation and meteor campaigns, the space-weather layer (aurora and geomagnetic nowcasts fed partly by the network's own opt-in sensor streams), visibility heatmaps, ODbL dataset releases, public API.
+
+## Open questions
+
+*Canonical home: these now live in `OPEN-QUESTIONS.md` — the living open-questions deliverable required by Janus-Facing Architecture — with the constraints each resolution inherits (including the "Verified"-label truth-authority tension and the Sybil-before-citation-weight gate). Update there; this paragraph is a summary.*
+
+The name is settled: Shanina (July 22, 2026). The database license (ODbL vs. CC0) is the one remaining licensing call, sharpened by the research value of sensor streams. Passive sensing needs a design spike before Phase 3 commits — battery cost, consent UX, anonymization architecture, and data volume are all real. The school program needs a partnership strategy — science teachers are the highest-leverage recruiters for Tier 1, and existing networks (occultation timing groups, meteor camera networks, variable-star associations, space-weather citizen-science projects) are natural allies rather than competitors. Timestamp discipline standards for occultation-grade contributions need a written spec. Monetization remains a subscription on advanced chart features, with the firm constraint that the commons and the dataset stay open regardless.
