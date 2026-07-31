@@ -1,0 +1,137 @@
+Shanina — nimi en pali ona
+==========================
+
+toki lawa (Toki Pona)
+lipu ni li lipu lili pi toki pona. NTARI li pali e ona kepeken nasin lawa
+"P2-002". lipu suli li lipu "Concept.txt" lon toki Inli (tenpo suno
+2026-07-29); ona taso li lipu lon. ilo sona li pali e lipu ni, la kulupu li
+kama lukin e ona kepeken nasin lawa "P2-002" kipisi 3.1.
+
+Note (English)
+This is a condensed community rendering under NTARI policy P2-002. The
+complete document is the English original Concept.txt (snapshot 2026-07-29).
+Machine-assisted draft pending community review per P2-002 section 3.1.
+
+sina lukin e pakala lon toki ni la o pona e ona: o pali e "fork" lon
+https://github.com/NTARI-RAND/shanina, o pana e "pull request". pana sina li
+pona tawa mi mute.
+
+---
+
+
+ni li seme
+----------
+
+Shanina li ilo tu lon insa pi sewi wan.
+
+- ilo nanpa wan li ilo pi nasin mun (astrology). ona li toki tan ma sina, tan
+  mun pi ken lukin lon sewi sina lon tenpo pimeja ni.
+- ilo nanpa tu li poki sona pi mun. ni li open tawa jan ale. ona li lon sewi
+  pi sona "JPL". jan mute li pana e sona tan ilo toki (phone). jan pi ilo
+  lukin mun (telescope) en tomo sona li pana e sona pona mute.
+
+ilo tu ni li wile e ilo ante: nasin mun li pana e wile tawa jan mute tawa
+lukin sewi, la poki sona li kama tan lukin ni. wawa pi kulupu li ni: ilo
+lukin suli wan li lukin e sewi wan tan ma wan taso, taso ilo lili mute mute
+li lukin e sewi ale lon ma ale lon tenpo ale. nimi wawa: mute li wawa tawa
+suli.
+
+
+nasin pali pi tenpo pimeja
+--------------------------
+
+lukin -> sitelen -> sona -> wan
+
+ilo li toki e mun pi ken lukin, kin la ona li toki e ni: mun ni li poka e
+lipu mun sina (natal chart). jan li sitelen e mun kepeken ilo. ilo li pana e
+sona mun tan lipu pi kulupu. sona li tawa poki sona pi kulupu, kin la mun ni
+li awen lon lipu tenpo pi jan ni lon tenpo ale.
+
+
+kulupu tu wan pi sona
+---------------------
+
+sona pi kulupu li pana e sona sin lon poka pi sona "JPL"; ona li weka ala e
+ona. kulupu pi sona li lon nasin sona, li lon ala ilo: ilo toki wan li ken
+pona lon nasin wan, li ken ike lon nasin ante. ilo ale li jo e nimi ona lon
+poki, en nanpa pi pona ona. ilo li toki sama Tier 0 lon mun pi sona la ona li
+kama jo e wawa. nasin suli li ni: sewi pi sona li pona e ilo, kin la ilo pona
+li sona e ijo pi sona ala. taso ilo toki li ken ala sona e suli, e tawa, e
+sike pi ma (Earth): ilo suli ante li sona e ni kepeken nanpa pona mute.
+
+- Tier 0 — sona sewi: sona pi "JPL" en sona pi ma ("GNSS"). sona ale ante li
+  kama sona tan ni.
+- Tier 1 — sona tan ilo suli: ilo lukin mun, ilo sitelen suli, ilo pi tomo
+  sona. sona ni li ken kama sona awen. kin la kulupu pi ilo toki mute li Tier
+  1: ilo "magnetometer" en ilo "GNSS" en ilo tenpo pona pi ilo toki mute mute
+  li pali sama ilo suli wan. jan sona li pali e ni lon tenpo pini: ilo
+  "CrowdMag" pi "NOAA", en lipu "Nature" (2024) pi kulupu "Google", en ilo
+  "Aurorasaurus".
+- Tier 2 — sitelen tan ilo toki: oko pi ilo toki li lili, la ona li ken ala
+  sona e ma mun kepeken nanpa pona. taso ona li toki e ni: mun li lon, jan li
+  ken lukin e ona. sitelen li jo e sona pi ma en tenpo, la kulupu li ken
+  alasa e ma pi mun seli suli (fireball) en pi kule sewi (aurora). sitelen ni
+  li awen lili taso; jan ante li pana e sona sama la ona li kama awen suli.
+
+
+pali pi ilo
+-----------
+
+1. lipu mun: lipu pi tenpo open sina, en mun pi tenpo ni. nasin "tropical" li
+   nasin open; nasin "sidereal" en nasin "house" ante li ken.
+2. sewi pi tenpo pimeja ni: mun pi ken lukin, mun poka mun, sike mun (Moon
+   phase), len suno (eclipse), mun tawa mute (meteor shower), mun len mun
+   (occultation). ijo ale li jo e nena pi ilo sitelen.
+3. lipu pi sewi (Sky Log): sona ale pi kulupu. jan mute li pana e sona sama
+   la mun ni li kama "Verified Community Event". toki kulupu li lon ona.
+4. mun lukin (witnessed transit): tenpo suli la lipu tenpo sina li kama lipu
+   pi sewi ale pi sina.
+5. lipu sona pi kulupu (Interpretation Commons): jan pi kulupu li pali e lipu
+   pi sona mun; nimi ona li lon. nasin toki li ni: toki li ken taso, li lawa
+   ala e sijelo en misikeke, e mani, e lawa ma.
+6. kulupu jan: kulupu pi ma sama, kulupu lukin pi mun suli, en alasa kulupu
+   lon ma mute pi mun len mun en mun tawa.
+7. toki tawa jan: wan lon tenpo pimeja wan taso, lon tenpo ni taso: mun li
+   ken lukin tan ma sina, li poka e lipu sina, kin la kon sewi li pona.
+
+
+lipu ken en nasin awen
+----------------------
+
+nasin ilo (code) li AGPL-3.0. lipu en lipu sona pi kulupu li CC BY-SA 4.0.
+poki sona pi mun li ODbL 1.0 anu CC0 — jan li toki ala e wan lon tenpo ni.
+tenpo mute la kulupu li pana e sona ale ona tawa jan ale.
+
+sona pona pi ma sina li lon poki len, li lon insa pi nanpa taso. jan ante li
+lukin e ma suli sina taso. sina wile la sina ken pana e ma sina lon poki
+open. sona pi ma lon sitelen ("EXIF") li weka lon sitelen pi jan ale. sona
+tan ilo "magnetometer" en ilo "GNSS" li kama taso tan toki "ken" pi sina; ona
+li weka e nimi sina lon ilo sina, li kama kulupu pi ma suli, li moku lili
+taso e wawa pi ilo sina.
+
+
+tenpo pali
+----------
+
+- nanpa wan: lipu mun, sewi pi tenpo pimeja ni, sitelen tan ilo toki, lipu
+  tenpo pi jan wan, lipu lili pi kulupu ale.
+- nanpa tu: nasin pi kama lon en kulupu sona, pana sitelen lon lipu linja
+  (web) kepeken ilo "astrometry.net", lipu sona pi kulupu nanpa wan, toki
+  lili, toki kulupu.
+- nanpa tu wan: kulupu pi tomo sona en ilo awen, alasa kulupu, sona pi sewi
+  wawa, sitelen pi ma ken lukin, pana pi poki sona, nasin open pi ilo ante.
+
+
+sina ken pali e seme
+--------------------
+
+- sina jo e ilo toki: o sitelen e mun pi tenpo pimeja, o pana e sona.
+- sina jo e ilo lukin mun, anu sina lon tomo sona: o pana e sitelen sina lon
+  lipu linja.
+- sina sona e nasin mun: o pali e lipu sona pi kulupu.
+- sina sona e nasin ilo: nasin ilo li open, la sina ken pali e ona.
+
+wile sona ale li lon lipu "OPEN-QUESTIONS.md": lipu ken pi poki sona, nasin
+pi ilo "magnetometer", kulupu pi tomo sona, nasin tenpo pona tawa mun len
+mun. mani li kama tan pali suli pi lipu mun, taso poki sona en lipu sona pi
+kulupu li awen open tawa jan ale.
