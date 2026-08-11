@@ -1,0 +1,126 @@
+> Tradução comunitária (rascunho) — política NTARI P2-002, Transmissão Multilíngue Global. Fonte: Concept.txt (original em inglês, snapshot de 2026-07-29). Rascunho comunitário assistido por máquina, pendente de revisão por mantenedor regional conforme P2-002 §3.1. As especificações técnicas centrais permanecem em inglês conforme §2.2.
+>
+> Notou algum erro nesta tradução? Correções de tradução são contribuições
+> valiosas e muito bem-vindas: faça um fork do repositório e abra um pull
+> request em https://github.com/NTARI-RAND/shanina.
+
+# Shanina — Conceito e Especificação de Funcionalidades
+
+*Nome: **Shanina** (definido em 22 de julho de 2026; rascunhado sob o título provisório "JFA Astrology", descartado para evitar colisão com a Janus-Facing Architecture). Rascunho v0.3 — 20 de julho de 2026. Substitui a v0.2: os tiers agora se vinculam a tipos de medição, e não a dispositivos, e a rede de sensores de celulares é elevada a instrumento geofísico de primeira classe para o envelope dinâmico da Terra.*
+
+---
+
+## O conceito
+
+Shanina são dois motores compartilhando um mesmo céu. O motor de consumo é um app de astrologia baseado em localização, sobre o zodíaco tropical, ancorado no que está de fato visível no céu esta noite. O motor de dados é um commons observacional aberto: um banco de dados astronômico construído pela comunidade, montado sobre as efemérides do JPL, alimentado por sensores de celulares em escala massiva e por telescópios domésticos e observatórios escolares em alta qualidade.
+
+Os dois motores precisam um do outro. A astrologia fornece o motivo diário para milhões de pessoas apontarem uma câmera para o céu; o commons transforma esses dispositivos apontados em dados. Os apps de astrologia existentes tratam o céu como computação abstrata embrulhada em texto proprietário; os projetos existentes de astronomia cidadã lutam para sustentar a participação. A aposta do Shanina é que cada um resolve o problema do outro. A candidata a tagline se mantém: **o app de astrologia que faz você olhar para cima.**
+
+A vantagem estrutural da comunidade sobre a astronomia centralizada é a distribuição, não a abertura. Um grande observatório vê um céu de um único lugar; dez mil instrumentos pequenos veem todos os céus, em todos os lugares, o tempo todo. As redes amadoras distribuídas já provam o modelo — redes de cronometragem de ocultações refinam órbitas de asteroides, redes de câmeras de meteoros triangulam bólidos, e observadores de estrelas variáveis alimentam a pesquisa profissional há um século. O Shanina dá a esse modelo um motor de crescimento.
+
+## O loop central
+
+**Olhe para cima → Registre → Aprenda → Conecte** (Look up → Log → Learn → Link). O Céu desta Noite (Tonight's Sky) apresenta eventos observáveis com relevância para o mapa pessoal (*Olhe para cima*). O membro captura o evento pela câmera do próprio app ou o registra manualmente (*Registre*). O motor de leitura monta o significado a partir da biblioteca de interpretações da comunidade (*Aprenda*). A observação entra no commons de dados no tier de evidência apropriado, e o evento testemunhado é carimbado permanentemente na linha do tempo do mapa do membro (*Conecte*). Cada passagem enriquece tanto o histórico pessoal do mapa quanto o registro compartilhado do céu.
+
+## O commons de dados: um modelo de evidência em tiers
+
+O JPL é o padrão-ouro e permanece, por ora, como o núcleo do mapa. Os dados comunitários estendem e anotam esse núcleo; nunca o sobrescrevem silenciosamente. Crucialmente, os tiers se vinculam a **pares instrumento–medição, não a dispositivos**: o mesmo celular pode ser fraco em uma medição e de primeira classe em outra.
+
+**Tier 0 — Núcleo de referência.** As Development Ephemerides do JPL e os SkyEvents computados a partir delas (posições, conjunções, fases, previsões de eclipses e ocultações), junto com o referencial GNSS/geodésico. Autoritativo por definição. Todo o resto do sistema é medido contra esta camada.
+
+**Tier 1 — Observações instrumentadas.** Telescópios, montagens com rastreamento, DSLRs em tripés, câmeras all-sky e equipamentos de observatórios escolares, contribuídos principalmente pela web. Estes podem produzir dados duráveis: astrometria com plate solving de corpos menores e cometas, cronometragens de ocultações, estimativas de brilho e triangulação de meteoros a partir de estações fixas. Observações de Tier 1 podem ser promovidas ao mapa durável após validação. É aqui que astrônomos domésticos e escolas competem por pura distribuição — cobertura no espaço (as cordas da sombra de uma ocultação precisam de observadores espalhados ao longo da faixa de trajetória no solo) e cobertura no tempo (transientes não esperam o agendamento de um observatório).
+
+**Tier 2 — Capturas de imagem por celular.** O caminho de imagem a partir do mobile. A óptica e a exposição automática dos celulares tornam irrealistas a astrometria e a fotometria em nível de catálogo, então uma imagem de celular, por si só, quase nunca entra no mapa central. Seus papéis: corroborar que um evento ocorreu e estava visível, aferir as condições reais do céu contra as previsões e testemunhar para o loop de astrologia — com a pose dos sensores (GPS, azimute da bússola, altitude do giroscópio, timestamp sincronizado) transformando cada captura em um relatório calibrado de apontamento que a multidão pode triangular durante bólidos e auroras brilhantes. Os registros de imagem carregam uma política de decaimento: alimentam a verificação, os mapas de calor de visibilidade e as linhas do tempo pessoais, e depois são arquivados, a menos que a corroboração os promova. O conjunto de sensores embrulhado em volta daquela câmera, porém, importa muito mais do que a própria câmera.
+
+### Celulares como uma rede planetária de sensores
+
+A câmera é o sensor mais fraco do dispositivo. O instrumento é o conjunto: magnetômetro, giroscópio, receptor GNSS (de dupla frequência em muitos celulares desde 2018) e um relógio disciplinado. Individualmente ruidosos, em escala de rede eles se tornam um instrumento geofísico de primeira classe — e os precedentes já estão publicados. O CrowdMag, da NOAA, agrega leituras de magnetômetros de celulares do mundo inteiro para complementar modelos do campo geomagnético. Pesquisadores do Google mostraram na Nature (2024) que medições GNSS agregadas de milhões de celulares Android podem mapear a ionosfera com cobertura que rivaliza com redes dedicadas de monitores, especialmente sobre regiões onde os monitores são escassos. O Aurorasaurus, financiado pela NASA, demonstrou que relatos de aurora feitos pela multidão refinam as previsões do oval auroral além do que os modelos de clima espacial entregam sozinhos.
+
+Cada uma dessas é uma medição do envelope dinâmico da Terra — campo magnético, ionosfera, alta atmosfera, ambiente de luz noturna — respondendo ao Sol e ao material que chega do sistema solar. Esse é o sentido preciso em que a rede mede *a própria Terra dentro do contexto do sistema solar*, e o Shanina deve reivindicar isso deliberadamente: submissões de imagens de celular para astrometria de catálogo permanecem como evidência de suporte Tier 2 com decaimento, enquanto os **fluxos de sensores** de celular, consentidos e agregados, **são Tier 1 como rede**.
+
+A fronteira honesta: a geometria, a orientação e a órbita da Terra permanecem fora de alcance. As constelações GNSS e o VLBI as fixam com precisões muitas ordens de magnitude além de uma bússola de celular, e elas são exatamente o referencial contra o qual a rede é calibrada — a seta vai do céu conhecido para o celular, não o contrário. De todo modo, a linhagem é antiga e lisonjeira: as expedições do trânsito de Vênus de 1761 e 1769 foram observadores distribuídos usando a própria Terra como linha de base para medir o sistema solar. O Shanina herda o método com relógios melhores e um bilhão de instrumentos.
+
+### Confiança, calibração e promoção
+
+Todo dispositivo contribuinte é registrado como um **Instrument** com uma classe (celular, câmera, equipamento de telescópio, estação fixa) e uma pontuação de calibração. Instrumentos ganham confiança concordando com o Tier 0 em alvos conhecidos: um telescópio novo se prova contra posições previstas de planetas e de campos estelares antes que suas medições inéditas tenham peso, e a bússola e a pose de um celular são continuamente calibradas contra as posições conhecidas dos objetos que ele fotografa. O peso da observação é, então, uma função da classe do instrumento, do tipo de medição, da pontuação de calibração, dos resíduos do plate solving e da corroboração independente. A promoção de efêmero para suporte e para durável segue limiares explícitos, e não o capricho de moderadores, e cada dado promovido mantém sua cadeia completa de proveniência. O princípio regente em todos os tiers: **o céu conhecido calibra o sensor, e o sensor calibrado mede o desconhecido.** A escada de calibração funciona também como pedagogia — uma turma de escola vendo seu equipamento se graduar de "não comprovado" para "confiável contra o JPL" é, por si só, um currículo.
+
+### Pipelines de captura
+
+**Mobile (a razão do mobile-first).** Um fluxo de câmera dentro do app amarrado ao Céu desta Noite: escolha o evento, aponte, capture. O app carimba a pose dos sensores (GPS, bússola, giroscópio) e um timestamp disciplinado por NTP, cuida do EXIF e arquiva a observação no tier apropriado com feedback imediato — o que você capturou, como isso corrobora outras observações, o que significa no seu mapa. Uma detecção opcional de brilho/estrelas no próprio dispositivo pode sinalizar capturas que merecem uma segunda olhada. Separadamente e estritamente opt-in: contribuição de fluxos de sensores em segundo plano (magnetômetro, observáveis GNSS) para a camada da rede planetária.
+
+**Web (câmeras e telescópios).** Upload de FITS, RAW e JPEG com um perfil de instrumento anexado. O plate solving no servidor, via o motor open source astrometry.net, produz soluções astrométricas reais; formulários de metadados capturam exposição, óptica e método de cronometragem. O upload em lote atende às escolas; uma API de estação para câmeras all-sky fixas chega em uma fase posterior. O trabalho com ocultações ganha um modo dedicado de captura de tempo, já que precisão subsegundo é todo o jogo ali — o NTP leva celulares a dezenas de milissegundos, o que é genuinamente utilizável para eventos brilhantes, e a cronometragem disciplinada por GPS é suportada para equipamentos sérios.
+
+Todos os pipelines produzem as mesmas entidades Observation ou SensorStream, diferindo apenas em proveniência e tier.
+
+## Especificação de funcionalidades
+
+### 1. Motor de mapas astrais
+
+Mapas natais e trânsitos ao vivo, baseados em localização, zodíaco tropical por padrão com um seletor sideral e sistemas de casas selecionáveis (Placidus como padrão de fábrica). Com a base de código agora sob AGPL-3.0, o obstáculo de licenciamento do Swiss Ephemeris se dissolve — seus termos AGPL são compatíveis —, de modo que o motor pode usar Skyfield/JPL para o pipeline observacional e qualquer uma das duas pilhas para os cálculos astrológicos; padronizar em Skyfield em tudo mantém uma única cadeia de dependências e é a recomendação enxuta.
+
+### 2. Céu desta Noite (Tonight's Sky)
+
+O ponto de entrada diário: planetas visíveis com nascer/ocaso, conjunções próximas com separação angular, fase da Lua, eclipses, chuvas de meteoros, ocultações brilhantes — filtrados por observabilidade real (altitude, magnitude, previsão de nuvens) e pareados com uma linha de relevância para o mapa. Cada item carrega um botão de captura que cai direto no pipeline mobile. Alertas de visibilidade de aurora entram no feed quando a camada de clima espacial for lançada.
+
+### 3. O Sky Log (Registro do Céu)
+
+O registro comunitário de observações, ciente dos tiers. As entradas mostram seu tier de evidência e sua confiança; aglomerados de capturas independentes graduam um evento ao status de **Evento Comunitário Verificado**. Visões do feed: perto de você, global, seguindo. Eventos verificados abrem threads.
+
+### 4. Trânsitos testemunhados
+
+Quando uma captura registrada corresponde a um trânsito que toca o mapa do membro, esse trânsito é marcado como **testemunhado** na sua linha do tempo, com a captura anexada. Ao longo dos anos, isso se torna um diário de céus sob os quais a pessoa de fato esteve — o núcleo de retenção do motor de consumo.
+
+### 5. O Commons de Interpretação
+
+Entradas de interpretação criadas pela comunidade, versionadas e com atribuição, por bloco simbólico, ranqueadas por voto e curadas por editores voluntários, licenciadas sob CC BY-SA 4.0 junto com a documentação. O motor de leitura monta leituras diárias a partir da matemática do mapa mais as entradas mais bem ranqueadas. O guia de estilo se mantém: reflexivo e enquadrado em possibilidades, nunca diretivo sobre saúde, dinheiro ou questões legais.
+
+### 6. Eventos comunitários, círculos e campanhas
+
+Threads sobre eventos verificados; círculos regionais em torno de céus compartilhados; watch parties para eventos de destaque. A Fase 3 adiciona campanhas coordenadas de observação — cordas de ocultação, noites de rede de meteoros e mutirões de sensores durante tempestades geomagnéticas — nas quais o app designa observadores distribuídos para posições ou janelas, o que é a distribuição-como-estratégia transformada em jogo.
+
+### 7. Notificações
+
+Silenciosas por design: no máximo um push por noite, apenas quando um evento é simultaneamente observável da localização do membro, relevante para o seu mapa e plausível dado o clima.
+
+## Licenciamento e fontes de dados
+
+**Código:** AGPL-3.0 em todos os serviços e apps. **Documentação e o Commons de Interpretação:** CC BY-SA 4.0. **O banco de dados de observações em si:** precisa de seu próprio instrumento — licenças de código e de conteúdo não cobrem dados compilados de forma limpa. A recomendação, pendente da sua decisão, é a ODbL 1.0 (o modelo do OpenStreetMap), que leva o mesmo ethos de share-alike para a camada de dados, com as mídias contribuídas sob CC BY-SA. A alternativa é CC0/CC BY para o máximo reúso científico, que pesquisadores costumam preferir — uma questão que agora importa mais, já que os dados de fluxos de sensores têm valor genuíno para a pesquisa de clima espacial.
+
+| Necessidade | Fonte | Licença / observação |
+|---|---|---|
+| Posições planetárias | Efemérides JPL DE via Skyfield | Dados em domínio público; biblioteca MIT |
+| Cálculos astrológicos (opcional) | Swiss Ephemeris | AGPL — agora compatível com a base de código |
+| Plate solving | Motor astrometry.net | Open source, auto-hospedável |
+| Previsão de cobertura de nuvens | Open-Meteo | Aberta, atribuição obrigatória |
+| Referência geomagnética e de clima espacial | Modelos e índices NOAA/SWPC | Abertos; CrowdMag como precedente para magnetometria por celular |
+| Calendário de chuvas de meteoros | Dados da International Meteor Organization | Verificar os termos antes do lançamento |
+| Camada de poluição luminosa | Datasets abertos derivados do VIIRS | Fase 3 |
+| Fusos horários e geocodificação | IANA tzdata, GeoNames | Abertos |
+
+O retorno à comunidade se mantém e se fortalece: liberações abertas periódicas do dataset anonimizado de observações, dos agregados de fluxos de sensores e do Commons completo, para que a alegação de "público e construído pela comunidade" seja verdadeira nos dois sentidos.
+
+## Esboço do modelo de dados
+
+Um **User** possui **Charts** e registra **Instruments** (classe, pontuação de calibração, método de cronometragem). O sistema computa **SkyEvents** a partir do Tier 0. Uma **Observation** referencia um Instrument e, opcionalmente, um SkyEvent, carregando proveniência (pose dos sensores ou solução de plate solving, metadados de exposição, disciplina de timestamp), um tier atribuído por tipo de medição, um valor de confiança e um estado de decaimento (efêmero → suporte → durável). Um **SensorStream** é uma série temporal consentida e anonimizada (leituras de magnetômetro, observáveis GNSS) de um Instrument, agregada regionalmente antes de entrar em qualquer superfície do produto. **Verifications** agrupam observações independentes em Eventos Comunitários Verificados. **CommonsEntries** são textos de interpretação versionados; um **Reading** vincula um Chart, SkyEvents e as entradas usadas, armazenado para reprodutibilidade. **Threads** pendem de eventos verificados e de entradas do commons.
+
+## Privacidade e segurança
+
+Existe uma tensão real entre a precisão do pipeline e a exposição pública: a triangulação de bólidos quer posições precisas, membros merecem privacidade de localização. Resolução: a pose precisa dos sensores é armazenada de forma privada e usada apenas dentro do pipeline de computação; a exibição pública é sempre desfocada para aproximadamente o nível de cidade; contribuidores podem optar por localização pública precisa, o que escolas e estações fixas tipicamente farão. O EXIF das fotos é removido das cópias públicas, e registrar com a localização totalmente oculta continua possível (excluído da triangulação). Fluxos passivos de sensores são um pedido maior do que fotos: a contribuição de magnetômetro e GNSS é estritamente opt-in, com consentimento em linguagem simples, anonimizada no próprio dispositivo, agregada regionalmente antes de qualquer uso e executada dentro de um orçamento de bateria publicado. A política de moderação do Commons continua a policiar alegações fatalistas ou médicas. O posicionamento para público adulto se mantém.
+
+## Posicionamento e honestidade
+
+A astrologia é apresentada como prática reflexiva; o commons de dados é apresentado como astronomia cidadã real e sensoriamento de clima espacial — alegações verificáveis, o que faz delas a espinha dorsal do marketing. As ideias de mobilização da comunidade, agora duas: **distribuição vence abertura**, e **o céu conhecido calibra o sensor; o sensor mede o desconhecido.**
+
+## Fases de construção
+
+**Fase 1 — MVP.** Motor de mapas astrais, Céu desta Noite, o pipeline de captura mobile com carimbo de pose dos sensores (promovido para o MVP — ele é o propósito do mobile-first), linha do tempo pessoal de trânsitos testemunhados, feed global mínimo.
+
+**Fase 2 — Commons.** Agrupamento de verificação e lógica de tiers, upload web com plate solving e registro de instrumentos, Commons de Interpretação v1, notificações silenciosas, threads.
+
+**Fase 3 — Rede.** Programa de escolas e estações, ingestão em lote e via API, campanhas de ocultações e meteoros, a camada de clima espacial (nowcasts de aurora e geomagnéticos alimentados em parte pelos próprios fluxos de sensores opt-in da rede), mapas de calor de visibilidade, liberações de datasets sob ODbL, API pública.
+
+## Questões em aberto
+
+*Lar canônico: estas agora vivem em `OPEN-QUESTIONS.md` — o entregável vivo de questões em aberto exigido pela Janus-Facing Architecture — com as restrições que cada resolução herda (incluindo a tensão de autoridade sobre a verdade do rótulo "Verificado" e o gate de Sybil-antes-do-peso-de-citação). Atualize lá; este parágrafo é um resumo.*
+
+O nome está definido: Shanina (22 de julho de 2026). A licença do banco de dados (ODbL vs. CC0) é a única decisão de licenciamento restante, aguçada pelo valor de pesquisa dos fluxos de sensores. O sensoriamento passivo precisa de um spike de design antes que a Fase 3 se comprometa — custo de bateria, UX de consentimento, arquitetura de anonimização e volume de dados são todos reais. O programa de escolas precisa de uma estratégia de parcerias — professores de ciências são os recrutadores de maior alavancagem para o Tier 1, e as redes existentes (grupos de cronometragem de ocultações, redes de câmeras de meteoros, associações de estrelas variáveis, projetos de ciência cidadã de clima espacial) são aliadas naturais, não concorrentes. Os padrões de disciplina de timestamp para contribuições em nível de ocultação precisam de uma especificação escrita. A monetização continua sendo uma assinatura sobre funcionalidades avançadas de mapa, com a restrição firme de que o commons e o dataset permanecem abertos independentemente disso.
