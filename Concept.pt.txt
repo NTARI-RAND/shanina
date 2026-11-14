@@ -72,7 +72,7 @@ Quando uma captura registrada corresponde a um trânsito que toca o mapa do memb
 
 ### 5. O Commons de Interpretação
 
-Entradas de interpretação criadas pela comunidade, versionadas e com atribuição, por bloco simbólico, ranqueadas por voto e curadas por editores voluntários, licenciadas sob CC BY-SA 4.0 junto com a documentação. O motor de leitura monta leituras diárias a partir da matemática do mapa mais as entradas mais bem ranqueadas. O guia de estilo se mantém: reflexivo e enquadrado em possibilidades, nunca diretivo sobre saúde, dinheiro ou questões legais.
+Entradas de interpretação criadas pela comunidade, versionadas e com atribuição, por bloco simbólico, ranqueadas por voto e curadas por editores voluntários, licenciadas sob CC BY-SA 4.0. O motor de leitura monta leituras diárias a partir da matemática do mapa mais as entradas mais bem ranqueadas. O guia de estilo se mantém: reflexivo e enquadrado em possibilidades, nunca diretivo sobre saúde, dinheiro ou questões legais.
 
 ### 6. Eventos comunitários, círculos e campanhas
 
@@ -84,7 +84,7 @@ Silenciosas por design: no máximo um push por noite, apenas quando um evento é
 
 ## Licenciamento e fontes de dados
 
-**Código:** AGPL-3.0 em todos os serviços e apps. **Documentação e o Commons de Interpretação:** CC BY-SA 4.0. **O banco de dados de observações em si:** precisa de seu próprio instrumento — licenças de código e de conteúdo não cobrem dados compilados de forma limpa. A recomendação, pendente da sua decisão, é a ODbL 1.0 (o modelo do OpenStreetMap), que leva o mesmo ethos de share-alike para a camada de dados, com as mídias contribuídas sob CC BY-SA. A alternativa é CC0/CC BY para o máximo reúso científico, que pesquisadores costumam preferir — uma questão que agora importa mais, já que os dados de fluxos de sensores têm valor genuíno para a pesquisa de clima espacial.
+**Código e documentação:** AGPL-3.0 em todos os serviços, apps e documentos, como a entrada 9 do registro de governança define para toda obra que a NTARI publica. **O Commons de Interpretação:** CC BY-SA 4.0. **O banco de dados de observações em si:** precisa de seu próprio instrumento — licenças de código e de conteúdo não cobrem dados compilados de forma limpa. A recomendação, pendente da sua decisão, é a ODbL 1.0 (o modelo do OpenStreetMap), que leva o mesmo ethos de share-alike para a camada de dados, com as mídias contribuídas sob CC BY-SA. A alternativa é CC0/CC BY para o máximo reúso científico, que pesquisadores costumam preferir — uma questão que agora importa mais, já que os dados de fluxos de sensores têm valor genuíno para a pesquisa de clima espacial.
 
 | Necessidade | Fonte | Licença / observação |
 |---|---|---|

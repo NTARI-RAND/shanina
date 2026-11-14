@@ -73,7 +73,7 @@ Lorsqu'une capture consignée correspond à un transit touchant le thème du mem
 
 ### 5. L'Interpretation Commons (« Bien commun des interprétations »)
 
-Entrées d'interprétation rédigées par la communauté, versionnées et attribuées, une par brique symbolique, classées par vote et curées par des éditeurs bénévoles, sous licence CC BY-SA 4.0 comme la documentation. Le moteur de lecture assemble les lectures quotidiennes à partir des calculs du thème et des entrées les mieux classées. La charte rédactionnelle tient : ton réflexif et formulé en termes de possibilités, jamais directif sur la santé, l'argent ou les questions juridiques.
+Entrées d'interprétation rédigées par la communauté, versionnées et attribuées, une par brique symbolique, classées par vote et curées par des éditeurs bénévoles, sous licence CC BY-SA 4.0. Le moteur de lecture assemble les lectures quotidiennes à partir des calculs du thème et des entrées les mieux classées. La charte rédactionnelle tient : ton réflexif et formulé en termes de possibilités, jamais directif sur la santé, l'argent ou les questions juridiques.
 
 ### 6. Événements communautaires, cercles et campagnes
 
@@ -85,7 +85,7 @@ Discrètes par conception : une notification push par nuit au maximum, et seulem
 
 ## Licences et sources de données
 
-**Code :** AGPL-3.0 pour l'ensemble des services et applications. **Documentation et Interpretation Commons :** CC BY-SA 4.0. **La base de données d'observations elle-même :** elle a besoin de son propre instrument — les licences de code et de contenu ne couvrent pas proprement les données compilées. La recommandation, en attente de votre décision, est l'ODbL 1.0 (le modèle OpenStreetMap), qui porte la même éthique de partage à l'identique dans la couche de données, avec les médias contribués sous CC BY-SA. L'alternative est CC0/CC BY pour une réutilisation scientifique maximale, que les chercheurs préfèrent souvent — une question qui compte davantage désormais, puisque les données de flux de capteurs ont une véritable valeur de recherche en météorologie de l'espace.
+**Code et documentation :** AGPL-3.0 pour l'ensemble des services, applications et documents, comme le fixe l'entrée 9 du registre de gouvernance pour toute œuvre que publie NTARI. **Interpretation Commons :** CC BY-SA 4.0. **La base de données d'observations elle-même :** elle a besoin de son propre instrument — les licences de code et de contenu ne couvrent pas proprement les données compilées. La recommandation, en attente de votre décision, est l'ODbL 1.0 (le modèle OpenStreetMap), qui porte la même éthique de partage à l'identique dans la couche de données, avec les médias contribués sous CC BY-SA. L'alternative est CC0/CC BY pour une réutilisation scientifique maximale, que les chercheurs préfèrent souvent — une question qui compte davantage désormais, puisque les données de flux de capteurs ont une véritable valeur de recherche en météorologie de l'espace.
 
 | Besoin | Source | Licence / note |
 |---|---|---|
