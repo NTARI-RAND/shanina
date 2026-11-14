@@ -21,6 +21,6 @@
 | COV-6 / Sybil antes del peso de las citas | **Abierto** — requerido antes de las recompensas de la Fase 3 (OQ-3) |
 | Disciplina REC | **Parcial** — cadenas de procedencia y estados de decaimiento explícitos; el decaimiento es archivístico, nunca un borrado, y debe seguir siendo así |
 | GOV-9 documento vivo de preguntas abiertas | **Cumplido** — `OPEN-QUESTIONS.md` se entrega con esta semilla |
-| GOV-10 bien común copyleft | **Cumplido (código/documentación)** — AGPL-3.0 + CC BY-SA; la licencia de la base de datos sigue abierta (OQ-4) |
+| GOV-10 bien común copyleft | **Cumplido (código/documentación)** — AGPL-3.0 para el código y los documentos (entrada 9 del registro de gobernanza); el Común de Interpretaciones, CC BY-SA 4.0; la licencia de la base de datos sigue abierta (OQ-4) |
 
 **Línea de honestidad:** el motor de interpretación es práctica reflexiva y así lo declara; las afirmaciones científicas del bien común son la mitad verificable y llevan el peso de la conformidad. No hay nada construido; cada mecanismo aquí es texto de concepto.

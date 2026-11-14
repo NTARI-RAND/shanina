@@ -22,6 +22,6 @@
 | COV-6 / Sybil avant le poids des citations | **Ouvert** — requis avant les récompenses de la Phase 3 (OQ-3) |
 | Discipline REC | **Partiel** — chaînes de provenance et états de déclin explicites ; le déclin relève de l'archivage, jamais de l'effacement, et doit le rester |
 | GOV-9 document vivant des questions ouvertes | **Satisfait** — `OPEN-QUESTIONS.md` est livré avec ce document fondateur |
-| GOV-10 communs copyleft | **Satisfait (code/documentation)** — AGPL-3.0 + CC BY-SA ; licence de la base de données : question ouverte (OQ-4) |
+| GOV-10 communs copyleft | **Satisfait (code/documentation)** — AGPL-3.0 pour le code et les documents (entrée 9 du registre de gouvernance) ; Interpretation Commons sous CC BY-SA 4.0 ; licence de la base de données : question ouverte (OQ-4) |
 
 **Ligne d'honnêteté :** le moteur d'interprétation relève de la pratique réflexive et le dit ; les assertions scientifiques des communs en sont la moitié vérifiable et portent le poids de la conformité. Rien n'est construit ; chaque mécanisme décrit ici est un texte conceptuel.

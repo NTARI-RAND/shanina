@@ -25,6 +25,6 @@
 | COV-6 / nasin "Sybil" li kama nanpa wan, suli tan toki (citation-weight) li kama nanpa tu | **pini ala (Open)** — pana pona pi tenpo nanpa 3 (Phase 3 rewards) li open ala la, ni li wile lon (OQ-3) |
 | nasin awen REC | **kipisi taso (Partial)** — linja pi ma tan (provenance chains) en nasin pi kama lili li sitelen lon lipu (explicit decay states); kama lili li tawa lipu awen pi tenpo pini (archival), li weka ala (never erasure) lon tenpo ale, li wile awen sama ni |
 | GOV-9 lipu pi wile sona pi pini ala li lon, li ante lon tenpo ale | **pona (Met)** — `OPEN-QUESTIONS.md` li lon poka pi lipu open ni |
-| GOV-10 poki pi jan ale pi nasin "copyleft" | **pona (sitelen ilo/lipu) (Met (code/docs))** — AGPL-3.0 + CC BY-SA; nasin pi ken kepeken pi poki sona (database license) li pini ala (OQ-4) |
+| GOV-10 poki pi jan ale pi nasin "copyleft" | **pona (sitelen ilo/lipu) (Met (code/docs))** — AGPL-3.0 tawa sitelen ilo en lipu (lipu nanpa 9 pi lipu awen pi nasin lawa); lipu sona pi kulupu li CC BY-SA 4.0; nasin pi ken kepeken pi poki sona (database license) li pini ala (OQ-4) |
 
 **toki lon:** ilo pi sona kon (interpretation engine) li pali pi lukin insa (reflective practice), li toki e ni; toki sona pi poki sona pi jan ale (commons' scientific claims) li kipisi pi ken lukin lon (verifiable half), li jo e suli pi nasin sama. jan li pali ala e ijo lon tenpo ni; nasin ale lon ni li toki pi lipu nasin taso (concept text).
