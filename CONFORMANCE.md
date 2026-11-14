@@ -13,6 +13,6 @@
 | COV-6 / Sybil before citation-weight | **Open** — required before Phase 3 rewards (OQ-3) |
 | REC discipline | **Partial** — provenance chains and explicit decay states; decay is archival, never erasure, and must stay that way |
 | GOV-9 living open-questions document | **Met** — `OPEN-QUESTIONS.md` ships with this seed |
-| GOV-10 copyleft commons | **Met (code/docs)** — AGPL-3.0 + CC BY-SA; database license open (OQ-4) |
+| GOV-10 copyleft commons | **Met (code/docs)** — AGPL-3.0 for code and documents (governance registry Entry 9); Interpretation Commons CC BY-SA 4.0; database license open (OQ-4) |
 
 **Honesty line:** the interpretation engine is reflective practice and says so; the commons' scientific claims are the verifiable half and carry the conformance weight. Nothing is built; every mechanism here is concept text.

@@ -66,7 +66,7 @@ When a logged capture corresponds to a transit touching the member's chart, that
 
 ### 5. The Interpretation Commons
 
-Community-authored, versioned, attributed interpretation entries per symbolic building block, ranked by vote and curated by volunteer editors, licensed CC BY-SA 4.0 alongside the documentation. The reading engine assembles daily readings from chart math plus top-ranked entries. The style guide holds: reflective and possibility-framed, never directive on health, money, or legal matters.
+Community-authored, versioned, attributed interpretation entries per symbolic building block, ranked by vote and curated by volunteer editors, licensed CC BY-SA 4.0. The reading engine assembles daily readings from chart math plus top-ranked entries. The style guide holds: reflective and possibility-framed, never directive on health, money, or legal matters.
 
 ### 6. Community events, circles, and campaigns
 
@@ -78,7 +78,7 @@ Quiet by design: one push per night at most, only when an event is simultaneousl
 
 ## Licensing & data sources
 
-**Code:** AGPL-3.0 across services and apps. **Documentation and the Interpretation Commons:** CC BY-SA 4.0. **The observation database itself:** needs its own instrument — code and content licenses don't cleanly cover compiled data. The recommendation, pending your call, is ODbL 1.0 (the OpenStreetMap model), which carries the same share-alike ethos into the data layer, with contributed media under CC BY-SA. The alternative is CC0/CC BY for maximum scientific reuse, which researchers often prefer — a question that now matters more, since sensor-stream data has genuine space-weather research value.
+**Code and documentation:** AGPL-3.0 across services, apps and docs, as governance registry Entry 9 sets for every work NTARI publishes. **The Interpretation Commons:** CC BY-SA 4.0. **The observation database itself:** needs its own instrument — code and content licenses don't cleanly cover compiled data. The recommendation, pending your call, is ODbL 1.0 (the OpenStreetMap model), which carries the same share-alike ethos into the data layer, with contributed media under CC BY-SA. The alternative is CC0/CC BY for maximum scientific reuse, which researchers often prefer — a question that now matters more, since sensor-stream data has genuine space-weather research value.
 
 | Need | Source | License / note |
 |---|---|---|

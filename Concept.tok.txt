@@ -98,7 +98,8 @@ pali pi ilo
 lipu ken en nasin awen
 ----------------------
 
-nasin ilo (code) li AGPL-3.0. lipu en lipu sona pi kulupu li CC BY-SA 4.0.
+nasin ilo (code) en lipu li AGPL-3.0 (tan lipu nanpa 9 pi lipu awen pi nasin
+lawa). lipu sona pi kulupu li CC BY-SA 4.0.
 poki sona pi mun li ODbL 1.0 anu CC0 — jan li toki ala e wan lon tenpo ni.
 tenpo mute la kulupu li pana e sona ale ona tawa jan ale.
 

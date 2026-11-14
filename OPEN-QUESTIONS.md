@@ -21,7 +21,7 @@ Shanina is an **education-layer knowledge commons** (Part VI): anchored, citable
 
 ## 4. Database license (the concept doc's remaining licensing call)
 **Problem.** ODbL 1.0 (share-alike) vs. CC0/CC BY (maximal scientific reuse) for the observation database — sharpened by the research value of sensor streams.
-**Constraints inherited.** The commons stays open regardless (stated, keep it); citation legible and forkable — whatever license, a claim, its references, and their weight must ship re-derivable (Part VI). Code AGPL-3.0 and docs CC BY-SA are already settled (GOV-10 satisfied there).
+**Constraints inherited.** The commons stays open regardless (stated, keep it); citation legible and forkable — whatever license, a claim, its references, and their weight must ship re-derivable (Part VI). Code and documents AGPL-3.0 (governance registry Entry 9) and the Interpretation Commons CC BY-SA 4.0 are already settled (GOV-10 satisfied there).
 **Status.** Open — a genuine values call between share-alike ethos and research uptake.
 
 ## 5. Passive sensor streams (design spike before Phase 3)
